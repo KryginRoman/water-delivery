@@ -1,0 +1,43 @@
+.water-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.water-counter__button {
+    background: #FFC369;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.water-counter__button-line {
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.4px;
+    height: 1.6px;
+}
+
+.vert-line {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.water-counter__button,
+.water-counter__value {
+    display: block;
+}
+
+.water-counter__value {
+    margin-right: 10px;
+    margin-left: 10px;
+}

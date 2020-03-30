@@ -1,0 +1,9 @@
+.order-details {
+    padding: 5px 24px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.order-details__item:not(:last-child) {
+    border-bottom: 1px dashed #D5DDE0;
+}

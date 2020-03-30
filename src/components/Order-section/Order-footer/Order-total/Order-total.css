@@ -1,0 +1,18 @@
+.total {
+    border-bottom: 1px solid #D5DDE0;
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.total__text,
+.total__count {
+    display: block;
+}
+
+.total__count > span {
+    color: #BABDC2;
+}

@@ -1,0 +1,7 @@
+.interval-list {
+    display: flex;
+}
+
+.interval-list__item:not(:last-child) {
+    margin-right: 9px;
+}

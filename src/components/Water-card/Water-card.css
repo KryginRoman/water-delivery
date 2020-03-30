@@ -1,0 +1,90 @@
+.water-card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 10px;
+    text-align: left;
+    width: 96px;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+}
+
+.water-card span {
+    display: block;
+}
+
+.water-card__wave {
+    position: absolute;
+    height: 120px;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+}
+
+.water-card__wave img{
+    width: 100%;
+    height: 100%;
+}
+
+.water-volume {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.water-count {
+    color: #BABDC2;
+    font-size: 10px;
+    line-height: 13px;
+}
+
+.water-cost {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgb(241, 241, 241);
+}
+
+.water-card-check {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+    z-index: 4;
+}
+
+.water-card-check__checkbox {
+    display: none;
+}
+
+.water-card-check__body {
+    background: #D5DDE0;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    transition: all .4s ease-in-out;   
+}
+
+.water-card-check .water-card-check__checkbox:checked ~ .water-card-check__body {
+    background: #FFC369;
+}
+
+.water-card__footer {
+    position: relative;
+    z-index: 3;
+}
+
+.water-card-counter {
+    margin-top: 15px;
+}

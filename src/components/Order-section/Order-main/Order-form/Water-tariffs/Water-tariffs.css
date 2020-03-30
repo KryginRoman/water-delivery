@@ -1,0 +1,7 @@
+.water-tariffs {
+    display: flex;
+}
+
+.water-tariffs__item:not(:last-child) {
+    margin-right: 20px;
+}

@@ -1,0 +1,35 @@
+.time-interval {
+    display: block;
+    max-width: 93px;
+}
+
+.time-interval:hover .time-interval__body,
+.time-interval:focus .time-interval__body {
+    background: #FFC369;
+}
+
+.time-interval:hover .time-interval__text,
+.time-interval:focus .time-interval__text {
+    color: #FFFFFF;
+}
+
+.time-interval__body {
+    background: #E5EDFF;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 10px 8px;
+    transition: all .4s ease-in-out;
+}
+
+.time-interval input[type="radio"] {
+    /* opacity: 0; */
+    display: none;
+}
+
+input[type="radio"]:checked ~ .time-interval__body {
+    background: #FFC369;
+    color: #FFFFFF;
+}

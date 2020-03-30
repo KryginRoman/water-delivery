@@ -1,0 +1,20 @@
+.order-form {
+    border-bottom: 1px dashed #D5DDE0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.order-form__client-data {
+    width: 100%;
+}
+
+.order-form__water-tariffs,
+.order-form__time-delivery {
+    width: 50%;
+    padding-top: 30px;
+}
+
+.order-form__time-delivery-title {
+    margin-bottom: 20px;
+}

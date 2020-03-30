@@ -1,0 +1,13 @@
+.input-default {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #D5DDE0;
+    font-size: 12px;
+    padding-bottom: 5px;
+    line-height: 15px;
+    width: 328px;
+}
+
+.error-input {
+    border: 2px solid red;
+}

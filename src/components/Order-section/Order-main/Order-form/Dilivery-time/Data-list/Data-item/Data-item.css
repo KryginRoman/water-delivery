@@ -1,0 +1,45 @@
+.data-item:hover .data-item__body {
+    background: #FFC369;
+    color: #FFF;
+}
+
+.data-item__body {
+    background: #E5EDFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    transition: all .4s ease-in-out;
+    text-align: center;
+}
+
+.data-item__data-number,
+.data-item__day-name {
+    display: block;
+}
+
+.data-item__data-number {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.data-item__day-name {
+    font-size: 9px;
+    line-height: 11px;
+}
+
+.holiday {
+    color: #FD7562;
+}
+
+.data-item input[type="radio"] {
+    display: none;
+}
+.data-item input[type="radio"]:checked ~ .data-item__body {
+    background: #FFC369;
+    color: #FFF;
+}

@@ -6,6 +6,9 @@ export default ({ cardList, selectedCardId, toggleTariffCard, increaseCardCount,
     return(
         <ul className="water-tariffs">
             {cardList.map(({ volume, count, cost, id, setOf }) => {
+                const onChange = (e) => {
+                    toggleTariffCard(id);
+                }
                 return(
                     <li className="water-tariffs__item" key={id}>
                         <WaterCard
@@ -14,7 +17,7 @@ export default ({ cardList, selectedCardId, toggleTariffCard, increaseCardCount,
                             cost={cost}
                             setOf={setOf}
                             id={id}
-                            toggleTariffCard={toggleTariffCard}
+                            onChange={onChange}
                             increaseCardCount={increaseCardCount}
                             reduceCardCount={reduceCardCount}
                             checked={selectedCardId === id}

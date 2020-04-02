@@ -1,0 +1,32 @@
+.water-button {
+    display: block;
+    background: #FFC369;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.water-button::before {
+    content: "";
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.4px;
+    height: 1.6px;
+}
+
+.water-button_incerement::after {
+    content: "";
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 6.4px;
+    height: 1.6px;
+}

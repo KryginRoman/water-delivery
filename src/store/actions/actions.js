@@ -1,15 +1,7 @@
-export const TOGGLE_IS_ORDER = "TOGGLE_IS_ORDER";
-export const TOGGLE_IS_HOLIDAY = "TOGGLE_IS_HOLIDAY";
-export const TOGGLE_IS_AGREEMENT = "TOGGLE_IS_AGREEMENT";
-export const TOGGLE_TARIFF_CARD = "TOGGLE_TARIFF_CARD";
-export const TOGGLE_INTERVAL_TIME = "TOGGLE_INTERVAL_TIME";
-export const TOGGLE_DATA_DAY = "TOGGLE_DATA_DAY";
-export const SET_IS_VALID_STATUS_FIELD = "SET_IS_VALID_STATUS_FIELD";
-export const INCREASE_CARD_COUNT = "INCREASE_CARD_COUNT";
-export const REDUCE_CARD_COUNT = "REDUCE_CARD_COUNT";
-export const RESET_ORDER = "RESET_ORDER";
-export const FORM_AN_ORDER = "FORM_AN_ORDER";
-export const CHANGE_CLIENT_FIELD = "CHANGE_CLIENT_FIELD";
+import {TOGGLE_IS_ORDER, TOGGLE_IS_HOLIDAY, TOGGLE_IS_AGREEMENT,
+        TOGGLE_TARIFF_CARD, TOGGLE_INTERVAL_TIME, TOGGLE_DATA_DAY,
+        SET_IS_VALID_STATUS_FIELD, INCREASE_CARD_COUNT, REDUCE_CARD_COUNT,
+        RESET_ORDER, CHANGE_CLIENT_FIELD} from '../constants';
 
 export const toggleIsOrder = () => {
     return {
@@ -73,22 +65,16 @@ export const reduceCardCount = cardId => {
     }
 }
 
-export const resetOrder = () => {
-    return {
-        type: RESET_ORDER
-    }
-}
-
-export const formAnOrder = () => {
-    return {
-        type: FORM_AN_ORDER
-    }
-}
-
 export const changeClientField = (fieldName, fieldValue) => {
     return {
         type: CHANGE_CLIENT_FIELD,
         fieldName,
         fieldValue
+    }
+}
+
+export const resetOrder = () => {
+    return {
+        type: RESET_ORDER
     }
 }

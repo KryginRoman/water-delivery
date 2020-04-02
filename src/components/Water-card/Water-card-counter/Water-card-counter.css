@@ -8,7 +8,7 @@
     line-height: 15px;
 }
 
-.water-counter__button {
+/* .water-counter__button {
     background: #FFC369;
     border: none;
     border-radius: 50%;
@@ -16,9 +16,9 @@
     position: relative;
     width: 16px;
     height: 16px;
-}
+} */
 
-.water-counter__button-line {
+/* .water-counter__button-line {
     background: #FFFFFF;
     position: absolute;
     top: 50%;
@@ -30,7 +30,7 @@
 
 .vert-line {
     transform: translate(-50%, -50%) rotate(90deg);
-}
+} */
 
 .water-counter__button,
 .water-counter__value {

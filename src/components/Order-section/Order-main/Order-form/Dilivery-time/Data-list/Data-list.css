@@ -12,6 +12,10 @@
     z-index: 1000;
 }
 
+.data-list .slick-arrow:hover {
+    background: #FFC369;
+}
+
 .data-list .slick-list {
     margin-right: 30px;
     margin-left: 30px;
@@ -38,12 +42,20 @@
     z-index: 9;
 }
 
-.data-list .slick-arrow::before {
+.data-list .slick-next::before {
+    transform: translate(50%, -50%) rotate(-135deg);
+}
+
+.data-list .slick-next::after {
     transform: translate(50%, -50%) rotate(135deg);
 }
 
-.data-list .slick-arrow::after {
-    transform: translate(50%, -50%) rotate(-135deg);
+.data-list .slick-prev::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.data-list .slick-prev::after {
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .slick-next.slick-disabled:before,

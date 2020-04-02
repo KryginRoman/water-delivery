@@ -8,8 +8,10 @@ export default () => {
     return(
         <div className="order-section">
             <Header titleText="Заполните данные" showCheckMark={false} />
-            <Body />
-            <Footer />
+            <form onSubmit={(e) => e.preventDefault()}>
+                <Body />
+                <Footer />
+            </form>
         </div>
     )
 }

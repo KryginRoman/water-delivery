@@ -6,7 +6,7 @@ import DiliveryTime from './Dilivery-time/Dilivery-time';
 
 export default () => {
     return(
-        <form className="order-form" >
+        <div className="order-form" >
             <div className="order-form__client-data">
                 <ClientData />
             </div>
@@ -18,6 +18,6 @@ export default () => {
                 <h3 className="order-form__time-delivery-title">Дата и время доставки</h3>
                 <DiliveryTime />
             </div>
-        </form>
+        </div>
     )
 }

@@ -3,8 +3,7 @@ import ClientData from './Client-data';
 import {toggleIsAgreement, changeClientField, setIsValidStatusField} from '../../../../../store/actions/actions';
 
 const mapStateToProps = state => {
-    const { clientDataFields, isAgreement } = state.main;
-
+    const { clientDataFields, isAgreement } = state.clientData;
     return {
         clientDataFields,
         isAgreement

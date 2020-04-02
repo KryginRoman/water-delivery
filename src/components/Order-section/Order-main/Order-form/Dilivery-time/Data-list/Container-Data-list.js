@@ -3,7 +3,7 @@ import DiliveryTime from './Data-list';
 import {toggleDataDay, toggleIsHoliday} from '../../../../../../store/actions/actions';
 
 const mapStateToProps = state => {
-    const { dataList, selectedDayNum } = state.main;
+    const { dataList, selectedDayNum } = state.dilivery;
     return {
         dataList,
         selectedDayNum,

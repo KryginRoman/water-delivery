@@ -16,14 +16,17 @@ export default ({ selectedDayNum, dataList, toggleDataDay ,toggleIsHoliday }) =>
         <div className="data-list">
             <Slider {...settings}>
                 {dataList.map(({ dataNumber, dayName, isHoliday }) => {
+                    const onChangeHandler = () => {
+                        toggleDataDay(dataNumber);
+                        toggleIsHoliday(isHoliday);
+                    }
                     return (
                         <div className="data-list__item" key={dataNumber}>
                             <DataItem
                                 dataNumber={dataNumber}
                                 dayName={dayName}
                                 isHoliday={isHoliday}
-                                toggleDataDay={toggleDataDay}
-                                toggleIsHoliday={toggleIsHoliday}
+                                onChange={onChangeHandler}
                                 checked={dataNumber === selectedDayNum}
                             />
                         </div>

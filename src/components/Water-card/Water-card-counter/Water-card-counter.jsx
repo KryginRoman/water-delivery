@@ -1,25 +1,15 @@
 import React from 'react';
+import WaterButton from '../Water-card-buttons/Water-card-buttons';
 import './Water-card-counter.css';
 
 export default ({ startValue, onIncrement, onDecrement, cardId }) => {
-    const onDecrementHandler = e => {
-        e.preventDefault();
-        onDecrement(cardId);
-    }
-    const onIncrementHandler = e => {
-        e.preventDefault();
-        onIncrement(cardId);
-    }
+    const onDecrementHandler = () => onDecrement(cardId);
+    const onIncrementHandler = () => onIncrement(cardId);
     return(
         <div className="water-counter">
-            <button className="water-counter__button" onClick={onDecrementHandler}>
-                <span className="water-counter__button-line"></span>
-            </button>
+            <WaterButton onClick={onDecrementHandler} isIncrement={false} />
             <span className="water-counter__value">{startValue}</span>
-            <button className="water-counter__button" onClick={onIncrementHandler}>
-                <span className="water-counter__button-line"></span>
-                <span className="water-counter__button-line vert-line"></span>
-            </button>
+            <WaterButton onClick={onIncrementHandler} isIncrement={true} />
         </div>
     )
 }

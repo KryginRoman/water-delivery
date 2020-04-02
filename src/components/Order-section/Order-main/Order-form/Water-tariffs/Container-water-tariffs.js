@@ -3,9 +3,10 @@ import WaterTariffs from './Water-tariffs';
 import {toggleTariffCard, increaseCardCount, reduceCardCount} from '../../../../../store/actions/actions';
 
 const mapStateToProps = state => {
+    const {tariffCards, selectedCardId} = state.waterCards;
     return {
-        cardList: state.main.tariffCards,
-        selectedCardId: state.main.selectedCardId
+        cardList: tariffCards,
+        selectedCardId: selectedCardId
     }
 }
 const mapDispatchToProps = {

@@ -2,6 +2,7 @@
     background: #418DE8;
     border: none;
     border-radius: 20px;
+    box-shadow: 4px 7px 32px -15px rgba(0,0,0,0.75);
     color: #fff;
     cursor: pointer;
     padding-bottom: 11px;
@@ -10,4 +11,14 @@
     font-size: 14px;
     line-height: 18px;
     width: 165px;
+    transition: .4s all ease-in-out;
+}
+
+.button:hover {
+    background: rgba(65, 141, 232, 0.7);
+}
+
+.button:disabled {
+    background: rgba(65, 141, 232, 0.3);
+    cursor: not-allowed;
 }

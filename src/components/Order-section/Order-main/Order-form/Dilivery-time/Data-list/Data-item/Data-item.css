@@ -1,3 +1,11 @@
+.data-item {
+    cursor: pointer;
+}
+
+.data-item_holiday {
+    color: #FD7562;
+}
+
 .data-item:hover .data-item__body {
     background: #FFC369;
     color: #FFF;
@@ -30,10 +38,6 @@
 .data-item__day-name {
     font-size: 9px;
     line-height: 11px;
-}
-
-.holiday {
-    color: #FD7562;
 }
 
 .data-item input[type="radio"] {

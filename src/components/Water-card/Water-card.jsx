@@ -10,32 +10,28 @@ export default ({
                  checked, 
                  cost, 
                  id, 
-                 toggleTariffCard, 
+                 onChange, 
                  increaseCardCount, 
                  reduceCardCount
                 }) => {
-    const isLargeSVG = (Number(waterVolume) > 1.5) ? true : false;
-    const onChange = (e) => {
-        const cardId = Number(e.target.getAttribute("data-id"));
-        toggleTariffCard(cardId);
-    }
+    const SVGPath = (Number(waterVolume) > 1.5) ? largeBottle : smallBottle;
 
     return(
         <div className="water-card-wrap">
             <div className="water-card">
                 <div className="water-card__header">
-                    <span className="water-volume">{waterVolume + " л"}</span>
-                    <span className="water-count">{setOf + " шт"}</span>
+                    <span className="water-volume">{`${waterVolume} л`}</span>
+                    <span className="water-count">{`${setOf} шт`}</span>
                 </div>
                 <div className="water-card__footer">
-                    <span className="water-cost">{cost + " Р"}</span>
+                    <span className="water-cost">{`${cost} Р`}</span>
                 </div>
                 <label className="water-card-check">
-                    <input className="water-card-check__checkbox" data-id={id} onChange={onChange} type="checkbox" checked={checked} />
+                    <input className="water-card-check__checkbox" onChange={onChange} type="checkbox" checked={checked} />
                     <div className="water-card-check__body"></div>
                 </label>
                 <div className="water-card__wave">
-                    <img src={isLargeSVG ? largeBottle : smallBottle} alt="water"/>
+                    <img src={SVGPath} alt="water"/>
                 </div>
             </div>
             {checked

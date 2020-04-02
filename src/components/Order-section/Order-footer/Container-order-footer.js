@@ -4,13 +4,16 @@ import {toggleIsOrder, resetOrder} from '../../../store/actions/actions';
 import {getTotalSumm, isAllValid} from '../../../handlers/handlers';
 
 const mapStateToProps = state => {
-    const { isOrder, isAgreement, tariffCards, selectedCardId, clientDataFields } = state.main;
+    const {isOrder, orderNum} = state.main;
+    const {tariffCards, selectedCardId} = state.waterCards;
+    const {isAgreement, clientDataFields} = state.clientData;
 
     return {
         isOrder,
         isAgreement,
         isAllValid: isAllValid(clientDataFields),
-        totalSumm: getTotalSumm(tariffCards, selectedCardId)
+        totalSumm: getTotalSumm(tariffCards, selectedCardId),
+        orderNum
     }
 }
 

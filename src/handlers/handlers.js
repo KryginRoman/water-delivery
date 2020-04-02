@@ -106,11 +106,10 @@ export class GetDateList {
         const currentYear = currentDate.getFullYear();
         const currentMonth = currentDate.getMonth();
         const currentDayOrder = currentDate.getDate();
-        const currentDayNum = this.getDayNum(currentDate);
         const lastDayInMonth = new Date( currentYear, currentMonth + 1, 0).getDate();
         const kek = lastDayInMonth - currentDayOrder;
         const daysDifference = (kek) < this._lenthList ? this._lenthList - kek: 0;
-        const lastDate = lastDayInMonth + daysDifference;
+        const lastDate = this._lenthList + daysDifference;
         
         for (let i = currentDayOrder; i <= lastDate; i++) {
             const date = new Date(currentYear, currentMonth, i);
@@ -136,7 +135,7 @@ export class Validator {
         return this.validateField(field, /^[a-zа-яё]+$/i);
     }
     validateNumberField = (field) => {
-        return this.validateField(field, /^[0-9\-\(\)]+$/g);
+        return this.validateField(field, /^[0-9\-()]+$/g);
     }
     validateEmailField = (field) => {
         return this.validateField(field, /^[a-zа-яё]+$/i);

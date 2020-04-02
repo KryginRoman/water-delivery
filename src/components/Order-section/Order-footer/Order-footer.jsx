@@ -3,24 +3,20 @@ import './Order-footer.css';
 import Total from './Order-total/Order-total';
 import Button from '../../Button/Button';
 
-const alertText = "Ваш заказ №221 успешно оформлен. В ближайшее время по указанному телефону с Вами свяжется наш менеджер.";
-
-export default ({ isOrder, toggleIsOrder, resetOrder, isAgreement, isAllValid, totalSumm }) => {
-    return(
+export default ({ isOrder, toggleIsOrder, resetOrder, isAgreement, isAllValid, totalSumm, orderNum }) => {
+    const alertText = `Ваш заказ №${orderNum} успешно оформлен. В ближайшее время по указанному телефону с Вами свяжется наш менеджер.`;
+    return (
         <div className="order-footer">
             <Total value={totalSumm} />
-            {isOrder ? <p className="order-footer__alert">{alertText}</p> : false}
+            {isOrder ? <p className="order-footer__alert">{alertText}</p> : null}
             <div className="order-footer__button">
-                {isOrder
-                ? <Button
-                    textButton="Новый заказ" 
-                    type="button" onClick={resetOrder} 
-                  />
-                : <Button
-                    textButton="Заказать воду" 
-                    type="button" onClick={toggleIsOrder} 
-                    disabled={(!isAgreement || !isAllValid)}
-                  />
+                {
+                    <Button
+                        textButton={isOrder ? "Новый заказ" : "Заказать воду"} 
+                        type="button" 
+                        onClick={isOrder ? resetOrder: toggleIsOrder}
+                        disabled={(!isAgreement || !isAllValid)}
+                    />
                 }
             </div>
         </div>

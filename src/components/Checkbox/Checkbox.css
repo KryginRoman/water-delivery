@@ -1,0 +1,38 @@
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.checkbox__custom-box {
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid #418DE8;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 10px;
+  transition: .4s all ease-in-out;
+}
+
+.client-succes__custom-box:hover {
+  background: #418DE8;
+}
+
+.checkbox:checked ~ .checkbox__custom-box {
+  background: #418DE8;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox__custom-box-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .4s all ease-in-out;
+}

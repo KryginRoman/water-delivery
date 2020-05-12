@@ -1,8 +1,9 @@
 import React from 'react';
-// import './Check-mark.css';
+
+import './Chek-mark.css';
 
 export default () => {
-    return(
-        <div className="check-mark"></div>
-    )
+  return (
+    <div className="check-mark" />
+  )
 }

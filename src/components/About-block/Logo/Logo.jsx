@@ -3,9 +3,12 @@ import './Logo.css';
 import logo from './water_logo.svg';
 
 export default () => {
-    return(
-        <div className="logo">
-            <img src={logo} alt="logo" />
-        </div>
-    )
+  return (
+    <div className="logo">
+      <img 
+        src={logo} 
+        alt="logo"
+      />
+    </div>
+  )
 }

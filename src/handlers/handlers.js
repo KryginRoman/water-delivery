@@ -88,7 +88,7 @@ export const isAllValid = (fields) => {
 export class GetDateList {
     constructor() {
         this._dateList = [];
-        this._lenthList = 10;
+        this._maxLength = 10;
     }
     getDayNum(date) {
         const dayNum = date.getDay();    
@@ -106,12 +106,9 @@ export class GetDateList {
         const currentYear = currentDate.getFullYear();
         const currentMonth = currentDate.getMonth();
         const currentDayOrder = currentDate.getDate();
-        const lastDayInMonth = new Date( currentYear, currentMonth + 1, 0).getDate();
-        const kek = lastDayInMonth - currentDayOrder;
-        const daysDifference = (kek) < this._lenthList ? this._lenthList - kek: 0;
-        const lastDate = this._lenthList + daysDifference;
+        const lastDateInList = currentDayOrder + this._maxLength;
         
-        for (let i = currentDayOrder; i <= lastDate; i++) {
+        for (let i = currentDayOrder; i <= lastDateInList; i++) {
             const date = new Date(currentYear, currentMonth, i);
             const dayNum = this.getDayNum(date);
             const dayName = this.getDayName(dayNum);
@@ -127,20 +124,19 @@ export class GetDateList {
   }
 
 export class Validator {
-    validateField = (field, regExp) => {
-        const fieldValue = field.value;
-        return regExp.test(fieldValue)
+    validateField = (value, regExp) => {
+        return regExp.test(value)
     }
-    validateNameField = (field) => {
-        return this.validateField(field, /^[a-zа-яё]+$/i);
+    validateNameField = (value) => {
+        return this.validateField(value, /^[a-zа-яё]+$/i);
     }
-    validateNumberField = (field) => {
-        return this.validateField(field, /^[0-9\-()]+$/g);
+    validateNumberField = (value) => {
+        return this.validateField(value, /^[0-9\-()]+$/g);
     }
-    validateEmailField = (field) => {
-        return this.validateField(field, /^[a-zа-яё]+$/i);
+    validateEmailField = (value) => {
+        return this.validateField(value, /^[a-zа-яё]+$/i);
     }
-    validateAdressField = (field) => {
-        return this.validateField(field, /^[a-zа-яё]+$/i);
+    validateAdressField = (value) => {
+        return this.validateField(value, /^[a-zа-яё]+$/i);
     }
 }
